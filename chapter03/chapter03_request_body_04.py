@@ -15,5 +15,4 @@ async def create_user(user: User, priority: int = Body(..., ge=1, le=3)):
     return {"user": user, "priority": priority}
 
 
-#echo '{"user":{"name":"John","age":30}}' | http POST http://localhost:8000/users 
-#echo '{"user":{"name":"John","age":30}, "priority":2}' | http POST http://localhost:8000/users 
+#echo '{"user":{"name":"John","age":30}, "priority":20}' | http POST http://localhost:8000/users 
