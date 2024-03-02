@@ -33,6 +33,8 @@ async def get_current_user(
     if access_token is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED)
     
+    return access_token.user
+    
 @app.post(
     "/register", status_code=status.HTTP_201_CREATED, response_model=schemas.UserRead
 )
